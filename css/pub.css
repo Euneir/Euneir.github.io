@@ -1,0 +1,27 @@
+body,h1,h2,h3,h4,h5,h6,ul,p,form,dl,dd,dt{
+	padding: 0;
+	margin: 0;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+a:visited{ /* 访问过的超链接*/
+	color: #000;
+}
+img{
+	border: none;
+	display: block;
+}
+body{ /* 最小宽度*/
+	/* min-width: 320px; */
+	/* max-width: 1040px; */ /* 建议不设置*/
+	margin: 0 auto; /* 与max-width一起用 居中*/
+	overflow-x: hidden; /* x轴可能会溢出*/
+}
+html{
+	font-size: 5.4vw; /* rem*/
+}
