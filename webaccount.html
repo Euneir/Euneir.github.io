@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+		<link rel="stylesheet" href="./css/pub.css">
+		<link rel="stylesheet" href="./fonts/iconfont.css">
+		<title></title>
+		<style>
+			body{
+				height: 674px;
+				background: linear-gradient(#1b5ba3, #e0e9f2,#024998);
+			}
+			.box{
+				margin: auto;
+				margin-top: 200px;
+				background-color: #f7f7f7;
+				width: 90%;
+				
+			}
+			.title{
+				color: #004998;
+				font-size: 40px;
+				font-weight: bold;
+				text-align: center;
+				line-height: 40px;
+			}
+			.Chinesetitle{
+				font-size: 35px;
+				font-weight: bold;
+				text-align: center;
+				line-height: 40px;
+				margin-bottom: 20px;
+			}
+			.account{
+				
+				width: 100%;
+				background-color: #ffffff;
+				border-bottom: 1px solid #dee1e5;
+			}
+			.inputTitle{
+				font-size: 14px;
+				letter-spacing: 1px;
+				color: #6e7174;
+				text-align: center;
+				line-height: 30px;
+			}
+			.input{
+				border: none;
+				width: 50%;
+				height: 20px;
+			}
+			.red{
+				color: #f85c5a;
+			}
+			.btn{
+				width: 80%;
+				font-size: 18px;
+				color: #ffffff;
+				background-color: #188754;
+				text-align: center;
+				margin: 8px auto;
+				line-height: 40px;
+			}
+			.foot{
+				font-size: 16px;
+				text-align: center;
+				font-weight: normal;
+			}
+			#username,#pwd{
+				font-size: 16px;
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="title">Neuedu</div>
+			<div class="Chinesetitle">东软教育</div>
+			<div class="account">
+				<p class="inputTitle">一网通用户名 / 学号 / 身份证号<span class="red">*</span></p>
+				<input type="text" class="input"> <span id="username"></span>
+			</div>
+			<div class="account">
+				<p class="inputTitle">一网通密码 / 动态口令<span class="red">*</span></p>
+				<input type="password" class="input"> <span id="pwd"></span>
+			</div>
+			<div class="btn">
+				验证
+			</div>
+			<p class="foot">
+				@2022 东软教育科技集团 IDC
+			</p>
+		</div>
+		<script>
+			
+			var namespan = document.getElementById("username");
+			var pwdspan = document.getElementById("pwd");
+			
+			document.getElementsByClassName("input")[0].onblur = function(){
+				var regExp = /^[1-9][0-9]{10}$/;
+				var result = regExp.test(this.value);
+				
+				if(this.value.trim().length == 0){
+					namespan.innerHTML = "不能为空";
+				}else if(!result){
+					namespan.innerHTML = "输入有误";
+				}
+			}
+			document.getElementsByClassName("input")[0].onfocus = function(){
+				namespan.innerHTML = "";
+			}
+			
+
+			document.getElementsByClassName("input")[1].onblur = function(){
+				
+				if(this.value.trim().length == 0){
+					pwdspan.innerHTML = "不能为空";
+				}
+			}
+			document.getElementsByClassName("input")[1].onfocus = function(){
+				pwd.innerHTML = "";
+			}
+			
+			document.getElementsByClassName("btn")[0].onclick = function(){
+				
+				document.getElementsByClassName("input")[0].focus();
+				document.getElementsByClassName("input")[0].blur();
+				document.getElementsByClassName("input")[1].focus();
+				document.getElementsByClassName("input")[1].blur();
+				
+				if(namespan.innerHTML.length != 0){
+					namespan.innerHTML = "请重新输入该字段";
+				}
+				if(pwdspan.innerHTML.length != 0){
+					pwdspan.innerHTML ="请重新输入该字段";
+				}
+				
+				if((namespan.innerHTML.length + pwdspan.innerHTML.length) == 0){
+					window.open("./webtwo.html","_self");
+				}
+			}
+		</script>
+	</body>
+</html>

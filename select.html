@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+		<link rel="stylesheet" href="./css/pub.css">
+		<link rel="stylesheet" href="./fonts/iconfont.css">
+		<title></title>
+		
+		<style>
+			.goback{
+				font-weight: bold;
+				font-size: 30px;
+				margin: 8px;
+				line-height: 30px;
+			}
+			.title{
+				margin: 0px 10px;
+				font-weight: 400;
+				letter-spacing: 1px;
+				font-size: 25px;
+			}
+			.text{
+				color: #9a9b9d;
+				margin: 8px;
+				letter-spacing: 1px;
+				font-size: 14px;
+				margin-bottom: 20px;
+			}
+			.school{
+				width: 90%;
+				text-align: center;
+				height: 40px;
+				line-height: 40px;
+				border: 1px solid #e5e7e6;
+				border-radius: 8px;
+				margin: 10px auto;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="goback">
+			<span class="iconfont icon-xitongfanhui"></span>
+		</div>
+		<h2 class="title">请选择机构</h2>
+		<p class="text">通过和希沃开放平台对接完成机构认证</p>
+		<div class="school">大连东软信息学院</div>
+		<div class="school">香港科技大学（广州）</div>
+		<script>
+			document.getElementsByClassName("goback")[0].onclick = function(){
+				window.history.back(); 
+			}
+			document.getElementsByClassName("school")[0].onclick = function(){
+				window.open("./webaccount.html","_self");
+			}
+		</script>
+	</body>
+</html>

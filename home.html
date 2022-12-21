@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+		<link rel="stylesheet" href="./css/pub.css">
+		<link rel="stylesheet" href="./fonts/iconfont.css">
+		<title>index</title>
+		<style>
+			.iconfont {
+				/* 设置所有图标*/
+				display: block;
+				text-align: center;
+				font-size: 30px;
+				margin: 10px auto 0;
+
+			}
+
+			.icon-saoyisao,
+			.icon-tianjia_huaban {
+				color: #777;
+				font-size: 25px;
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+
+			.tab {
+				width: 100%;
+
+			}
+
+			.tt {
+				display: flex;
+			}
+
+			.tc {
+				display: none;
+			}
+
+
+
+			.inbnav {
+				flex-grow: 1;
+			}
+
+			.page_title {
+				font-weight: normal;
+				font-size: 26px;
+				display: inline-block;
+			}
+
+			.main .saojia {
+				position: absolute;
+				right: 0;
+				top: 0;
+				display: flex;
+			}
+
+			body {
+				position: relative;
+				background-color: #fafafa;
+			}
+
+			.main {
+				margin: 10px;
+			}
+
+			.bnav {
+				background-color: #fff;
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				z-index: 9;
+				border-top: 1px solid #ddd;
+			}
+
+			.bnav p {
+				text-align: center;
+				font-size: 14px;
+				line-height: 30px;
+
+			}
+
+			.bnav {
+				color: #b2b3b5;
+			}
+
+			.li_detial a {
+				display: block;
+				width: 100%;
+				display: flex;
+			}
+
+			.li_detial img {
+				border-radius: 10%;
+				width: 120px;
+				padding: 14px;
+				order: -1;
+			}
+
+			.main_li {
+				border-radius: 10%;
+				margin: 10px;
+				background-color: #fff;
+				border-radius: 2%;
+			}
+
+			.text_detail {
+				margin-top: 9px;
+				/* float: left; */
+			}
+
+			.li_detial h2 {
+				font-weight: normal;
+				margin-right: 10px;
+				font-size: 17px;
+
+			}
+
+			.li_detial .letter {
+				font-size: 12px;
+				display: block;
+				color: #65696c;
+				line-height: 28px;
+				
+			}
+
+			.blueCharacter {
+				color: #1868c1;
+			}
+
+			.main_ul {
+				margin-top: 20px;
+
+			}
+
+			.letter {
+				text-indent: 3px;
+			}
+
+			.bnav .tt .cur {
+
+				color: #000 !important;
+			}
+
+			.list_li {
+				margin-top: 20px;
+			}
+
+			.list_li li {
+				margin: 10px;
+				border-radius: 2%;
+				background-color: #fff;
+				height: 100px;
+			}
+
+			.list_li_detail_p_one {
+				float: right;
+				font-size: 12px;
+				margin-top: 20px;
+				color: #999a9c;
+				margin-right: 20px;
+			}
+
+			.list_li_detail_title {
+				display: inline-block;
+				font-size: 20px;
+				font-weight: normal;
+				margin: 10px;
+				margin-top: 12px;
+				margin-bottom: 0px;
+			}
+
+			.list_li_detail_p_two {
+				margin: 10px;
+				text-indent: 4px;
+				font-size: 13px;
+				color: #999a9c;
+			}
+
+			.upper {
+				border-radius: 2%;
+				background-color: #fff;
+				margin-top: 11px;
+			}
+
+			.h3_title {
+				font-size: 16px;
+				margin: auto 0;
+				display: inline-block;
+				font-weight: 500;
+				flex-grow: 1;
+				margin-left: 18px;
+			}
+
+			.upper img {
+				width: 80px;
+				margin: 10px;
+			}
+
+			.arrow_point {
+				line-height: 55px;
+				color: #babbbd;
+				margin: auto;
+				margin-left: 0;
+				margin-right: 20px;
+
+			}
+
+			.upper_one_first,
+			.upper_one_second,
+			.upper_one_third,
+			.upper_one_fourth {
+				display: flex;
+
+			}
+
+			.upper_one_second {
+				border-bottom: 1px solid #eeeeee;
+			}
+
+			.upper_txt {
+				color: #9a9b9d;
+				font-size: 16px;
+				margin: auto 20px;
+			}
+
+			.upper_two_first,
+			.upper_two_second,
+			.upper_two_third,
+			.upper_two_fourth {
+				display: flex;
+				border-top: 1px solid #eeeeee;
+			}
+
+			.upper_two_first {
+				border: none;
+			}
+
+			.loneButton {
+				text-align: center;
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 50px;
+			}
+
+
+
+			.innertab {
+				width: 100%;
+				margin: 8px 0px;
+			}
+
+			.innertt {
+				display: flex;
+			}
+
+			.innertt h2 {
+				line-height: 33px;
+				margin: auto 2px;
+				margin-right: 15px;
+				font-size: 14px;
+				color: #98999b;
+				background-color: #fff;
+			}
+
+			.innertt .innercur {
+
+				font-weight: normal;
+				color: #000;
+				font-size: 20px;
+			}
+
+			.innertc {
+
+				display: none;
+			}
+
+			.search {
+				margin-top: 20px;
+				display: flex;
+				background-color: #f0f0f0;
+				border-radius: 4%;
+				width: 60%;
+			}
+
+			.icon-sousuo {
+				margin: auto 4px;
+				font-size: 20px;
+				color: #a9aaac;
+			}
+
+			.likeplaceholder {
+				line-height: 33px;
+				font-size: 14px;
+				color: #c2c3c5;
+			}
+
+			.thisneedflex {
+				display: flex;
+			}
+
+			.icon-wanchengliebiao {
+				font-size: 20px;
+				position: fixed;
+				right: 10px;
+				top: 10px;
+			}
+
+			.serachbox {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.logoInSearchBox {
+				margin-top: 17px;
+				height: 35px;
+				width: 35px;
+				border-radius: 50%;
+				background-color: #f0f0f0;
+			}
+
+			.icon-guolv,
+			.icon-rili,
+			.icon-shoucang {
+
+				font-size: 22px;
+				line-height: 19px;
+			}
+
+			.noFile {}
+
+			.noFile img {
+				position: fixed;
+				right: 37%;
+				top: 33%;
+				width: 30%;
+			}
+
+			.noFile div {
+				position: fixed;
+				right: 41%;
+				top: 54%;
+				color: #9a9a9a;
+				font-size: 20px;
+			}
+
+			.date {
+				color: #999999;
+				font-size: 14px;
+				margin: 10px 2px;
+				font-weight: normal;
+			}
+			.teacher{
+				font-size: 14px;
+				line-height: 20px;
+			}
+			.innertc .li_detial {
+				border-radius: 10%;
+				margin: 10px;
+				background-color: #fff;
+				border-radius: 5px;
+			}
+
+			.li_detial .smallPhoto {
+				display: inline;
+				padding: 0;
+				margin: 0;
+				width: 5%;
+			}
+
+			.li_detial p {
+				display: inline;
+				line-height: 14px;
+			}
+			.exit{
+				width: 300px;
+				height: 170px;
+				display: none;
+				border-radius: 10px;
+				position: fixed;
+				top: 37%;
+				left: 14%;
+				font-size: 25px;
+				text-align: center;
+				line-height: 84px;
+				background-color: #fff;
+				z-index: 9;
+			}
+			.twobutton{
+				display: flex;
+				
+			}
+			.btnone,.btntwo{
+				
+				
+				flex-grow: 1;
+			}
+			.btnone{
+				border-top: 1px solid #ebebeb;
+				border-right: 1px solid #ebebeb;
+				font-weight: normal;
+			}
+			.btntwo{
+				border-top: 1px solid #ebebeb;
+				color: red;
+			}
+			.shadow{
+				width: 1000px;
+				height: 1000px;
+				position: fixed;
+				left: 0;
+				top: 0;
+				z-index: 3;
+				background-color: rgba(99, 99, 99, 0.5);
+				display: none;
+			}
+		</style>
+
+
+	</head>
+	<body>
+		<main class="main">
+			<div class="tc" style="display: block;">
+				<h2 class="page_title">我的课程</h2>
+				<div class="saojia">
+					<span class="iconfont icon-saoyisao"></span>
+					<span class="iconfont icon-tianjia_huaban"></span>
+				</div>
+				<ul class="main_ul">
+
+				</ul>
+			</div>
+
+
+
+
+
+
+			<div class="tc">
+				<h2 class="page_title">
+					消息中心
+				</h2>
+				<ul class="list_li">
+				</ul>
+
+			</div>
+
+
+
+
+
+
+
+
+			<div class="tc">
+
+				<div class="innertab">
+
+					<div class="thisneedflex">
+						<div class="innertt">
+							<h2 class="innercur">文件</h2>
+							<h2>报告</h2>
+						</div>
+						<div class="compelete">
+							<span class="iconfont icon-wanchengliebiao"></span>
+						</div>
+					</div>
+
+					<div class="innertc" style="display: block">
+						<div class="serachbox">
+							<div class="search">
+								<span class="iconfont icon-sousuo"></span>
+								<span class="likeplaceholder">请输入文件名称</span>
+							</div>
+							<div class="logoInSearchBox">
+								<span class="iconfont icon-guolv"></span>
+							</div>
+							<div class="logoInSearchBox">
+								<span class="iconfont icon-rili"></span>
+							</div>
+							<div class="logoInSearchBox">
+								<span class="iconfont icon-shoucang"></span>
+							</div>
+						</div>
+
+						<div class="noFile">
+							<img src="./img/pictureInfile.jpg">
+							<div>暂无文件</div>
+						</div>
+					</div>
+					<div class="innertc">
+						<div class="serachbox">
+							<div class="search" style="width: 75%;">
+								<span class="iconfont icon-sousuo"></span>
+								<span class="likeplaceholder">请输入文件名称</span>
+							</div>
+							<div class="logoInSearchBox">
+								<span class="iconfont icon-guolv"></span>
+							</div>
+							<div class="logoInSearchBox">
+								<span class="iconfont icon-rili"></span>
+							</div>
+						</div>
+
+						<ul class="inner_list">
+
+						</ul>
+
+
+
+					</div>
+				</div>
+
+
+			</div>
+
+
+
+
+
+
+
+
+
+			<div class="tc">
+				
+				<div class="shadow">
+					
+				</div>
+				
+				<h2 class="page_title">
+					我的
+				</h2>
+				
+				<div class="exit">
+					确定要退出登录吗？
+					<div class="twobutton">
+						<div class="btnone">取消</div>
+						<div class="btntwo">确定</div>
+					</div>
+				</div>
+				
+				<div class="upper">
+					<div class="upper_one_first">
+						<h3 class="h3_title">头像</h3>
+						<img src="./img/photo.jpg">
+						<p class="arrow_point">></p>
+					</div>
+					<div class="upper_one_second">
+						<h3 class="h3_title">姓名</h3>
+						<p class="upper_txt">刘奕博</p>
+						<p class="arrow_point">></p>
+					</div>
+					<div class="upper_one_third">
+						<h3 class="h3_title">学校管理</h3>
+						<p class="upper_txt">大连东软信息学院</p>
+						<p class="arrow_point">></p>
+					</div>
+					<div class="upper_one_fourth">
+						<h3 class="h3_title">学工号</h3>
+						<p class="upper_txt">20001040402</p>
+						<p class="arrow_point">></p>
+					</div>
+				</div>
+				<div class="upper">
+					<div class="upper_two_first">
+						<h3 class="h3_title">设置</h3>
+						<p class="arrow_point">></p>
+					</div>
+					<div class="upper_two_second">
+						<h3 class="h3_title">操作指南</h3>
+						<p class="arrow_point">></p>
+					</div>
+					<div class="upper_two_third">
+						<h3 class="h3_title">意见反馈</h3>
+						<p class="arrow_point">></p>
+					</div>
+					<div class="upper_two_fourth">
+						<h3 class="h3_title">NFC信息写入</h3>
+						<p class="arrow_point">></p>
+					</div>
+				</div>
+
+				<div class="upper loneButton">
+					切换为老师身份
+				</div>
+				<div class="upper loneButton" id = "exit">
+					退出登录
+				</div>
+			</div>
+		</main>
+
+		<nav class="bnav">
+			<div class="tt">
+				<span class="cur inbnav">
+					<span class="iconfont icon-kechengtixi"></span>
+					<p>课程</p>
+				</span>
+				<span class="inbnav">
+					<span class="iconfont icon-xiaoxi"></span>
+					<p>消息</p>
+				</span>
+				<span class="inbnav">
+					<span class="iconfont icon-wenjianjia_o"></span>
+					<p>资料</p>
+				</span>
+				<span class="inbnav">
+					<span class="iconfont icon-31wode"></span>
+					<p>我的</p>
+				</span>
+			</div>
+		</nav>
+
+		<script src="js/tap.js"></script>
+		<script src="js/innertap.js"></script>
+		<script src="js/json.js"></script>
+		<script>
+			document.getElementById("exit").onclick = function(){
+				document.querySelector(".exit").style.display = "block";
+				document.querySelector(".shadow").style.display = "block";
+			}
+			document.querySelector(".btnone").onclick = function(){
+				document.querySelector(".exit").style.display = "none";
+				document.querySelector(".shadow").style.display = "none";
+			}
+			document.querySelector(".btntwo").onclick = function(){
+				window.location.href = "./index.html";
+			}
+		</script>
+	</body>
+</html>

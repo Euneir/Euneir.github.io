@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+		<link rel="stylesheet" href="./css/pub.css">
+		<title></title>
+		<style>
+			body {
+				height: 674px;
+				background: linear-gradient(#1b5ba3, #e0e9f2, #024998);
+			}
+
+			.box {
+				margin: auto;
+				margin-top: 130px;
+				background-color: #f7f7f7;
+				width: 100%;
+
+			}
+
+			.title {
+				color: #004998;
+				font-size: 40px;
+				font-weight: bold;
+				text-align: center;
+				line-height: 40px;
+			}
+
+			.Chinesetitle {
+				font-size: 35px;
+				font-weight: bold;
+				text-align: center;
+				line-height: 40px;
+				margin-bottom: 20px;
+			}
+
+
+			.btn {
+				width: 80%;
+				font-size: 18px;
+				color: #ffffff;
+				background-color: #188754;
+				text-align: center;
+				margin: 8px auto;
+				line-height: 40px;
+			}
+
+			.foot {
+				font-size: 16px;
+				text-align: center;
+				font-weight: normal;
+			}
+
+			.thisDiv {
+				width: 95%;
+				background-color: #cfe2ff;
+				margin: auto;
+				color: #084198;
+				font-weight: bold;
+				font-size: 24px;
+				line-height: 30px;
+				text-align: center;
+			}
+			.power{
+				border: 1px solid #dee1e5;
+				width: 95%;
+				margin: 15px auto;
+				line-height: 40px;
+			}
+			.powertitle{
+				font-size: 22px;
+				text-align: center;
+			}
+			.powerdetail{
+				display: inline;
+				font-size: 16px;
+			}
+			a{
+				text-decoration:underline;
+				color: #176ceb;
+				font-size: 16px;
+			}
+			.center{
+				margin-bottom: 30px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="title">Neuedu</div>
+			<div class="Chinesetitle">东软教育</div>
+
+			<div class="thisDiv">
+				<p class="pone">即将登录</p>
+				<p class="ptwo">[希沃品课教学平台]</p>
+			</div>
+			
+			<div class="power">
+				<p class="powertitle">请选择您要授予的权限</p>
+				<input type="checkbox" checked><p class="powerdetail">获取您的||类用户信息（物理标识、姓名、学号、用户名）</p>
+			</div>
+			<div class="btn">
+				授权
+			</div>
+			<div class="center"><a href="javascript:void(0)">不是“刘奕博”？点此切换</a></div>
+			<p class="foot">
+				@2022 东软教育科技集团 IDC
+			</p>
+		</div>
+		
+		<script>
+			document.getElementsByTagName("a")[0].onclick = function(){
+				window.history.back();
+			}
+			document.getElementsByClassName("btn")[0].onclick = function(){
+				window.open("./home.html","_self");
+			}
+		</script>
+	</body>
+</html>

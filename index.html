@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+		<title></title>
+		<link rel="stylesheet" href="./css/pub.css">
+		
+		<style>
+			img{
+				width: 70px;
+				border-radius: 15px;
+				margin: 100px auto 20px;
+			}
+			.title{
+				text-align: center;
+			}
+			.loginBtn{
+				margin: 60px auto 20px;
+				text-align: center;
+				font-size: 20px;
+				letter-spacing: 1px;
+				color: #fff;
+				background-color: #006ee7;
+				width: 90%;
+				line-height: 50px;
+				border-radius: 10px;
+			}
+			.icon {
+			  width: 1em;
+			  height: 1em;
+			  vertical-align: -0.15em;
+			  fill: currentColor;
+			  overflow: hidden;
+			  
+			  position: relative;
+			  top: 10%;
+			  left: 20%;
+			}
+			
+			hr{
+				width: 60px;
+				display: inline-block;
+
+				background-color:#ebebeb; 
+				height:1px; 
+				border:none;
+				
+				vertical-align: -5%;
+				
+			}
+			.otherway{
+				text-align: center;
+				font-size: 12px;
+				line-height: 30px;
+				color: #cccdcf;
+				letter-spacing: 1px;
+				
+			}
+			.loginwaybox{
+				margin-top: 20px;
+				margin-left: 130px;
+				display: flex;
+			}
+			.loginway{
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				border: 1px solid #e6e5ea;
+				background-color: #fff;
+				
+				margin-left: 25px;
+				
+				
+			}
+
+			.thisone{
+				font-size: 16px;
+				text-indent: 1px;
+				position: relative;
+				top: 5%;
+				left: 11%;
+				color: #0c6bd2;;
+			}
+			
+			.policy{
+				position: fixed;
+				left: 26%;
+				bottom: 5%;
+				
+				font-size: 11px;
+				color: #9d9ea0;
+			}
+			.bluestr{
+				color: #046de1;
+			}
+			.likebutton{
+				width: 10px;
+				height: 10px;
+				border: 1px solid #a4a7a9;
+				border-radius: 50%;
+				display: inline-block;
+				margin-right: 8px;
+				vertical-align: -10%;
+			}
+			.check{
+				font-size: 14px;
+				color: #fff;
+				background-color: #4c5053;
+				width: 200px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				margin: 50px auto 0;
+				border-radius: 10px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="./img/logo.jpg">
+		<div class="title">希沃品客</div>
+		<div class = "loginBtn">手机号登录/注册</div>
+		<div class="otherway"><hr> 其他登录方式 <hr></div>
+		
+		<div class="loginwaybox">
+			<div class = "loginway">
+				<svg class="icon" aria-hidden="true">
+				  <use xlink:href="#icon-weixin"></use>
+				</svg>
+			</div>
+			
+			<div class = "loginway">
+				<span class = "thisone">机构</span>
+			</div>
+			
+		</div>
+		
+		<div class="check"> 请勾选同意服务条款</div>
+
+		<div class="policy"><div class="likebutton"></div>阅读并同意 <span class="bluestr"> <<使用条款>> 
+		</span> 和 <span class="bluestr"> <<隐私政策>>  </span></div>
+	</body>
+	
+	<script src="./fonts/iconfont.js"></script>
+	
+	<script>
+		
+		
+		
+		document.getElementsByClassName("likebutton")[0].onclick = function(){
+			/* console.log(this.style.backgroundColor); */
+			if(this.style.backgroundColor != "rgb(0, 110, 231)"){
+				this.style.backgroundColor = "rgb(0, 110, 231)";
+			}else{
+				this.style.backgroundColor = "rgb(255, 255, 255)";
+			}
+		}
+		
+		document.getElementsByClassName("thisone")[0].onclick= function(){
+			var color = document.getElementsByClassName("likebutton")[0].style.backgroundColor;
+			if(color.indexOf("110") != -1){
+				window.open("./select.html",'_self');
+			}else{
+				
+				document.getElementsByClassName("check")[0].style.display = "block";
+					
+				setTimeout(function() {
+					document.getElementsByClassName("check")[0].style.display = "none";
+				}, 2000);
+			}
+		}
+	</script>
+</html>
